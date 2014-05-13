@@ -8,16 +8,21 @@ And this really excellent site: http://www.naturalearthdata.com/downloads/50m-ph
 
 This only needs to occur once to render the map against which all else will be rendered.
 
+```
 sudo apt-get install gdal-bin nodejs npm nodejs-legacy
 sudo npm install -g topojson
+```
 
-http://www.naturalearthdata.com/downloads/50m-physical-vectors/
-wget http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/physical/ne_50m_coastline.zip
+* http://www.naturalearthdata.com/downloads/50m-physical-vectors/
+* ```wget http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/50m/physical/ne_50m_coastline.zip````
 
+### Build Map
+```
 git clone https://github.com/mbostock/world-atlas.git
 cd world-atlas
 npm install
 make topo/world-50m.json
+```
 
 Alternative mapping library: http://matplotlib.org/basemap/users/examples.html
 
@@ -40,6 +45,7 @@ Responsible for building a list of norad ids to update.  It then makes the neces
 For each norad id, update the current position and update mongodb.
 
 ## Setup
+```
 sudo apt-get install mongod
 sudo pip install pymongo
 sudo pip install pyephem
@@ -61,7 +67,7 @@ sat = {norad: 4, latitude: 40.0, longitude: -40.0}
 db.satellites.insert(sat)
 
 db.users.distinct('objects')
-
+```
 # Mapping server
 
 Looks up satellites associated with given userid.  Takes the positions of each satellite and returns last calculated location.
