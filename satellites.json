@@ -1,0 +1,21 @@
+[
+    {
+	norad_id: 1,
+	name: "asdf",
+	latitude: 34.5,
+	longitude: -118.5
+    },
+    {
+	norad_id: 2,
+	name: "foo",
+	latitude: -20.5,
+	longitude: -28.5
+    },
+    {
+	norad_id: 3,
+	name: "blah",
+	latitude: 50.5,
+	longitude: 20.5
+    }
+]
+
