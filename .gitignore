@@ -1,7 +1,10 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+
+# VIM stuff
 *.swp
+*.swo
 
 # C extensions
 *.so
@@ -46,10 +49,8 @@ coverage.xml
 # Rope
 .ropeproject
 
-# Django stuff:
-*.log
-*.pot
-
 # Sphinx documentation
 docs/_build/
 
+# Secret config updates
+config.py
