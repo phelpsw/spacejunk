@@ -34,6 +34,8 @@ for norad_id in norad_ids:
 	tle = json.loads(resp.read())[0]
 	print tle
 
+	# TODO: check if object has decayed!
+
 	db.satellites.update({'norad': int(norad_id)},
 		{'norad': int(norad_id),
 		 'name': str(tle['OBJECT_NAME']),
@@ -42,6 +44,7 @@ for norad_id in norad_ids:
 		 'status' : 'alive'},
 		upsert=True)
     except IndexError:
+	# TODO: consider status == invalid
 	db.satellites.update({'norad': int(norad_id)},
 		{'norad': int(norad_id), 'status': 'dead'},
 		upsert=True)
