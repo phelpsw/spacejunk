@@ -40,6 +40,8 @@ Runs once every day.
 
 Responsible for building a list of norad ids to update.  It then makes the necessary requests to space-track.org and stores the resulting TLE in a map.  Because the entire space-track catalog (50k sats * 200B per listing) can fit into about 10MB this doesn't seem unreasonable.
 
+This uses config.py for space-track.org login credentials.  Once this file has been updated with creds, use ```git update-index --assume-unchanged config.py``` so git will ignore changes on this file.
+
 
 ## TLE Propagation Thread
 For each norad id, update the current position and update mongodb.
