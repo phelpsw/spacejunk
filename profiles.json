@@ -1,7 +1,0 @@
-[
-    {
-	name: "phelps",
-	direct: [1, 3],
-	indirect: [2]
-    }
-]
